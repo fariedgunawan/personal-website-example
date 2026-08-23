@@ -1,5 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
-import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiInstagram, FiDribbble, FiArrowRight } from 'react-icons/fi';
 import { useLanguage } from './LanguageContext';
 
 export default function GetInTouch() {
@@ -43,10 +43,10 @@ export default function GetInTouch() {
 
              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
                 {[
-                  { icon: FiMail, label: "Email", href: "mailto:hello@example.com" },
-                  { icon: FiLinkedin, label: "LinkedIn", href: "#" },
-                  { icon: FiGithub, label: "GitHub", href: "#" },
-                  { icon: FiTwitter, label: "Twitter", href: "#" }
+                  { icon: FiLinkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/faried-gunawan/" },
+                  { icon: FiInstagram, label: "Instagram", href: "https://www.instagram.com/fariedgnwn/" },
+                  { icon: FiDribbble, label: "Dribbble", href: "https://dribbble.com/faried_gunawan" },
+                  { icon: FiGithub, label: "GitHub", href: "https://github.com/fariedgunawan" }
                 ].map((social, i) => (
                   <motion.a 
                     key={i}
@@ -117,9 +117,9 @@ export default function GetInTouch() {
                     whileTap={{ scale: 0.98 }}
                     className="relative z-10 group w-full bg-zinc-900 dark:bg-white text-white dark:text-black font-semibold rounded-xl px-5 py-4 flex items-center justify-center gap-3 hover:bg-black dark:hover:bg-zinc-200 transition-colors duration-300 mt-2"
                   >
-                    <span className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center gap-2 group-hover:pr-6 transition-all duration-300">
                       {t('contact.send')}
-                      <FiSend className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      <FiArrowRight className="w-4 h-4 absolute right-0 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                     </span>
                   </motion.button>
                </form>

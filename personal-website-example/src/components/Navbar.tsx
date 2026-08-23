@@ -39,7 +39,6 @@ export default function Navbar() {
           <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
           <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
           <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
-          <li><a href="#portfolio" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.portfolio')}</a></li>
           <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</a></li>
           <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
         </ul>

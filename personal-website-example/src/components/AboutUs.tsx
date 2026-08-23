@@ -1,4 +1,5 @@
 import { motion, type Variants } from 'framer-motion';
+import { FiArrowRight } from 'react-icons/fi';
 import me from "../assets/faried.webp"
 import { useLanguage } from './LanguageContext';
 
@@ -48,9 +49,21 @@ export default function AboutUs() {
               {t('about.p1')}
             </motion.p>
 
-            <motion.p variants={itemVariants} className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 mb-10">
+            <motion.p variants={itemVariants} className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 mb-8">
               {t('about.p2')}
             </motion.p>
+
+            <motion.div variants={itemVariants} className="flex mt-2">
+              <a 
+                href="https://personal-website-faried.vercel.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 px-8 py-3 bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black font-semibold transition-colors duration-500 rounded-2xl shadow-lg hover:scale-105 transform-gpu"
+              >
+                {t('about.cta')}
+                <FiArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+              </a>
+            </motion.div>
 
 
           </motion.div>

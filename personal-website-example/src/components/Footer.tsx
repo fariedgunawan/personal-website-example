@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiDribbble, FiInstagram } from 'react-icons/fi';
 import { useLanguage } from './LanguageContext';
 
 export default function Footer() {
@@ -21,7 +21,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Navigation */}
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium">
             <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
             <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
@@ -33,10 +32,10 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {[
-              { icon: FiGithub, href: "#", label: "GitHub" },
-              { icon: FiLinkedin, href: "#", label: "LinkedIn" },
-              { icon: FiTwitter, href: "#", label: "Twitter" },
-              { icon: FiInstagram, href: "#", label: "Instagram" }
+              { icon: FiLinkedin, href: "https://www.linkedin.com/in/faried-gunawan/", label: "LinkedIn" },
+              { icon: FiInstagram, href: "https://www.instagram.com/fariedgnwn/", label: "Instagram" },
+              { icon: FiDribbble, href: "https://dribbble.com/faried_gunawan", label: "Dribbble" },
+              { icon: FiGithub, href: "https://github.com/fariedgunawan", label: "GitHub" }
             ].map((social, index) => (
               <motion.a
                 key={index}

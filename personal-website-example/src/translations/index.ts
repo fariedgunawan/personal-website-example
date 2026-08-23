@@ -40,7 +40,8 @@ export const translations = {
       title3: " and ",
       title4: "engineering.",
       p1: "Hello! I'm a software developer with a deep appreciation for aesthetics and user experience. I build digital products that are not only highly functional but also visually striking.",
-      p2: "My approach involves a meticulous attention to detail, a love for smooth animations, and a dedication to writing clean, maintainable code. When I'm not coding, you can find me exploring new design trends or optimizing workflows."
+      p2: "My approach involves a meticulous attention to detail, a love for smooth animations, and a dedication to writing clean, maintainable code. When I'm not coding, you can find me exploring new design trends or optimizing workflows.",
+      cta: "Know More About Me"
     },
     portfolio: {
       label: "My Work",
@@ -157,8 +158,9 @@ export const translations = {
       title2: "desain",
       title3: " dan ",
       title4: "rekayasa.",
-      p1: "Halo! Saya adalah seorang pengembang perangkat lunak dengan apresiasi mendalam terhadap estetika dan pengalaman pengguna. Saya membangun produk digital yang tidak hanya sangat fungsional tetapi juga memukau secara visual.",
-      p2: "Pendekatan saya melibatkan perhatian yang cermat terhadap detail, kecintaan pada animasi yang mulus, dan dedikasi untuk menulis kode yang bersih dan mudah dikelola. Saat saya tidak sedang mengode, Anda bisa menemukan saya mengeksplorasi tren desain baru atau mengoptimalkan alur kerja."
+      p1: "Halo! Saya seorang pengembang perangkat lunak dengan apresiasi mendalam terhadap estetika dan pengalaman pengguna. Saya membangun produk digital yang tidak hanya sangat fungsional tetapi juga memukau secara visual.",
+      p2: "Pendekatan saya melibatkan perhatian yang cermat terhadap detail, kecintaan pada animasi yang halus, dan dedikasi untuk menulis kode yang bersih dan mudah dipelihara. Saat saya tidak sedang membuat kode, Anda bisa menemukan saya mengeksplorasi tren desain baru atau mengoptimalkan alur kerja.",
+      cta: "Kenali Saya Lebih Jauh"
     },
     portfolio: {
       label: "Karya Saya",

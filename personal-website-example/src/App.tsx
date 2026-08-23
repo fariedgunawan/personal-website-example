@@ -6,7 +6,6 @@ import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
 import TechStack from "./components/TechStack";
 import MyService from "./components/MyService";
-import Portfolio from "./components/Portfolio";
 import Projects from "./components/Projects";
 import FAQ from "./components/FAQ";
 import GetInTouch from "./components/GetInTouch";
@@ -22,7 +21,6 @@ function App() {
           <TechStack />
           <MyService />
           <AboutUs />
-          <Portfolio />
           <Projects />
           <FAQ />
           <GetInTouch />
