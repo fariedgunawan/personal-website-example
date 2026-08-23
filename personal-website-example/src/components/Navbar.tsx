@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from './ThemeProvider';
-import { FiSun, FiMoon } from 'react-icons/fi';
+import { FiSun, FiMoon, FiGlobe } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import { useLanguage } from './LanguageContext';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,12 +36,12 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden md:flex gap-6 lg:gap-8 items-center font-medium">
-          <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Home</a></li>
-          <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">About</a></li>
-          <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Services</a></li>
-          <li><a href="#portfolio" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Portfolio</a></li>
-          <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Projects</a></li>
-          <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">FAQ</a></li>
+          <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
+          <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
+          <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
+          <li><a href="#portfolio" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.portfolio')}</a></li>
+          <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</a></li>
+          <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
         </ul>
 
         <div className="flex items-center gap-4">
@@ -51,8 +53,19 @@ export default function Navbar() {
             {theme === 'dark' ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
 
+          <button
+            onClick={toggleLanguage}
+            className="w-10 h-10 rounded-full flex items-center justify-center bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white transition-colors relative group"
+            aria-label="Toggle language"
+          >
+            <FiGlobe size={18} />
+            <span className="absolute -bottom-8 bg-black dark:bg-white text-white dark:text-black text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity font-bold">
+              {language === 'en' ? 'ID' : 'EN'}
+            </span>
+          </button>
+
           <a href="#get-in-touch" className="px-5 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold shadow-lg shadow-black/10 dark:shadow-white/10 hover:scale-105 transition-transform text-sm hidden sm:block">
-            Contact Us
+            {t('nav.contact')}
           </a>
         </div>
       </motion.div>

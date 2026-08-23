@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi';
+import { useLanguage } from './LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,17 +17,17 @@ export default function Footer() {
               Lorem<span className="text-zinc-400 dark:text-zinc-600">Dev</span>
             </span>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center md:text-left transition-colors duration-500">
-              Building extraordinary digital experiences.
+              {t('footer.subtitle')}
             </p>
           </div>
 
           {/* Navigation */}
           <ul className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-medium">
-            <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Home</a></li>
-            <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">About</a></li>
-            <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Services</a></li>
-            <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">Projects</a></li>
-            <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
+            <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
+            <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
+            <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</a></li>
+            <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
           </ul>
 
           {/* Social Links */}
@@ -54,10 +56,10 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-zinc-500 dark:text-zinc-500 transition-colors duration-500">
-          <p>© {currentYear} LoremDev. All rights reserved.</p>
+          <p>© {currentYear} LoremDev. {t('footer.rights')}</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-zinc-900 dark:hover:text-white transition-colors">{t('footer.privacy')}</a>
+            <a href="#" className="hover:text-zinc-900 dark:hover:text-white transition-colors">{t('footer.terms')}</a>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import { motion, type Variants } from 'framer-motion';
 import me from "../assets/faried.webp"
-
-
+import { useLanguage } from './LanguageContext';
 
 export default function AboutUs() {
+  const { t } = useLanguage();
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,19 +37,19 @@ export default function AboutUs() {
             viewport={{ once: true, margin: "-50px" }}
           >
             <motion.span variants={itemVariants} className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4">
-              Behind the Code
+              {t('about.label')}
             </motion.span>
 
             <motion.h2 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white mb-8 tracking-tight">
-              A passionate creator bridging <span className="text-zinc-500 dark:text-zinc-400">design</span> and <span className="text-zinc-500 dark:text-zinc-400">engineering.</span>
+              {t('about.title1')}<span className="text-zinc-500 dark:text-zinc-400">{t('about.title2')}</span>{t('about.title3')}<span className="text-zinc-500 dark:text-zinc-400">{t('about.title4')}</span>
             </motion.h2>
 
             <motion.p variants={itemVariants} className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 mb-6">
-              Hello! I'm a software developer with a deep appreciation for aesthetics and user experience. I build digital products that are not only highly functional but also visually striking.
+              {t('about.p1')}
             </motion.p>
 
             <motion.p variants={itemVariants} className="text-lg leading-relaxed text-zinc-600 dark:text-zinc-400 mb-10">
-              My approach involves a meticulous attention to detail, a love for smooth animations, and a dedication to writing clean, maintainable code. When I'm not coding, you can find me exploring new design trends or optimizing workflows.
+              {t('about.p2')}
             </motion.p>
 
 

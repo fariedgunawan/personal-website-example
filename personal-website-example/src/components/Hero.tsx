@@ -2,9 +2,11 @@ import { motion, type Variants } from "framer-motion";
 import GradientWaves from "./GradientWaves";
 import RotatingText from "./RotatingText";
 import { useTheme } from "./ThemeProvider";
+import { useLanguage } from "./LanguageContext";
 
 export default function Hero() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
   const isDark = theme === 'dark';
 
   const containerVariants: Variants = {
@@ -46,7 +48,7 @@ export default function Hero() {
       >
         <motion.div variants={itemVariants} className="mb-6">
           <span className="inline-block py-1.5 px-4 bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800 text-sm font-semibold tracking-wider uppercase mb-2 rounded-2xl transition-colors duration-500">
-            Software Engineer & System Architect
+            {t('hero.badge')}
           </span>
         </motion.div>
         
@@ -54,9 +56,9 @@ export default function Hero() {
           variants={itemVariants}
           className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-zinc-900 dark:text-white mb-6 leading-tight tracking-tight flex flex-col items-center justify-center gap-2 sm:gap-4 transition-colors duration-500"
         >
-          <span>Crafting Seamless</span>
+          <span>{t('hero.title')}</span>
           <RotatingText
-            texts={['Digital Experiences', 'Web Applications', 'Scalable Systems', 'User Interfaces']}
+            texts={t('hero.rotating') as unknown as string[]}
             mainClassName="text-zinc-500 dark:text-zinc-400 overflow-hidden justify-center transition-colors duration-500"
             staggerFrom={"last"}
             initial={{ y: "100%" }}
@@ -73,7 +75,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl leading-relaxed text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 transition-colors duration-500"
         >
-          I specialize in building intuitive UI/UX, robust frontend architectures, and scalable systems that solve complex problems and delight users.
+          {t('hero.subtitle')}
         </motion.p>
         
         <motion.div 
@@ -86,7 +88,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 bg-black hover:bg-zinc-800 text-white dark:bg-white dark:hover:bg-zinc-200 dark:text-black font-semibold transition-colors duration-500 w-full sm:w-auto rounded-2xl"
           >
-            Get in Touch
+            {t('hero.cta_primary')}
           </motion.a>
           
           <motion.a 
@@ -95,7 +97,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 bg-white hover:bg-zinc-100 text-black border border-zinc-300 hover:border-zinc-400 dark:bg-black dark:hover:bg-zinc-900 dark:text-white dark:border-zinc-700 dark:hover:border-zinc-500 font-semibold transition-colors duration-500 w-full sm:w-auto rounded-2xl"
           >
-            Show Portfolio
+            {t('hero.cta_secondary')}
           </motion.a>
         </motion.div>
       </motion.div>

@@ -1,7 +1,9 @@
 import { motion, type Variants } from 'framer-motion';
 import { FiMail, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi';
+import { useLanguage } from './LanguageContext';
 
 export default function GetInTouch() {
+  const { t } = useLanguage();
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,13 +32,13 @@ export default function GetInTouch() {
              viewport={{ once: true, margin: "-50px" }}
            >
              <motion.span variants={itemVariants} className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4 block transition-colors duration-500">
-                Let's Connect
+                {t('contact.label')}
              </motion.span>
              <motion.h2 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight leading-[1.1] transition-colors duration-500">
-               Let's build <br/> something <span className="text-zinc-400 dark:text-zinc-600">extraordinary.</span>
+               {t('contact.title1')} <br/> {t('contact.title2')} <span className="text-zinc-400 dark:text-zinc-600">{t('contact.title3')}</span>
              </motion.h2>
              <motion.p variants={itemVariants} className="text-zinc-600 dark:text-zinc-400 max-w-lg text-lg mb-10 leading-relaxed transition-colors duration-500">
-               I'm always open to discussing product design work or partnership opportunities. Drop me a line!
+               {t('contact.desc')}
              </motion.p>
 
              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
@@ -81,37 +83,31 @@ export default function GetInTouch() {
                   {/* Subtle noise/texture overlay for premium glass look */}
                   <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>
 
-                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2 relative z-10 transition-colors duration-500">Send a Message</h3>
+                  <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-6 transition-colors duration-500">{t('contact.form_title')}</h3>
                   
-                  <div className="relative z-10 flex flex-col gap-4">
+                  <div className="space-y-4">
                     <div>
-                      <label htmlFor="name" className="sr-only">Name</label>
+                      <label className="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-2 transition-colors duration-500">Name</label>
                       <input 
                         type="text" 
-                        id="name" 
-                        placeholder="Your Name" 
-                        className="w-full bg-zinc-50/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-5 py-4 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white transition-all duration-300"
-                        required
+                        placeholder={t('contact.name')}
+                        className="w-full bg-white/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent transition-all duration-300"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="sr-only">Email</label>
+                      <label className="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-2 transition-colors duration-500">Email</label>
                       <input 
                         type="email" 
-                        id="email" 
-                        placeholder="Your Email" 
-                        className="w-full bg-zinc-50/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-5 py-4 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white transition-all duration-300"
-                        required
+                        placeholder={t('contact.email')}
+                        className="w-full bg-white/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent transition-all duration-300"
                       />
                     </div>
                     <div>
-                      <label htmlFor="message" className="sr-only">Message</label>
+                      <label className="block text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-2 transition-colors duration-500">Message</label>
                       <textarea 
-                        id="message" 
                         rows={4}
-                        placeholder="Tell me about your project..." 
-                        className="w-full bg-zinc-50/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-5 py-4 text-zinc-900 dark:text-white placeholder:text-zinc-400 dark:placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-900 dark:focus:ring-white transition-all duration-300 resize-none"
-                        required
+                        placeholder={t('contact.msg')}
+                        className="w-full bg-white/50 dark:bg-black/50 border border-zinc-200 dark:border-zinc-800 rounded-xl px-4 py-3 text-zinc-900 dark:text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white focus:border-transparent transition-all duration-300 resize-none"
                       ></textarea>
                     </div>
                   </div>
@@ -122,7 +118,7 @@ export default function GetInTouch() {
                     className="relative z-10 group w-full bg-zinc-900 dark:bg-white text-white dark:text-black font-semibold rounded-xl px-5 py-4 flex items-center justify-center gap-3 hover:bg-black dark:hover:bg-zinc-200 transition-colors duration-300 mt-2"
                   >
                     <span className="relative z-10 flex items-center gap-2">
-                      Send Message
+                      {t('contact.send')}
                       <FiSend className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                   </motion.button>

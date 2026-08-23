@@ -1,5 +1,6 @@
 import "./index.css";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { LanguageProvider } from "./components/LanguageContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -13,20 +14,22 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <Hero />
-        <TechStack />
-        <MyService />
-        <AboutUs />
-        <Portfolio />
-        <Projects />
-        <FAQ />
-        <GetInTouch />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider>
+        <div className="flex flex-col min-h-screen">
+          <Navbar />
+          <Hero />
+          <TechStack />
+          <MyService />
+          <AboutUs />
+          <Portfolio />
+          <Projects />
+          <FAQ />
+          <GetInTouch />
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

@@ -1,37 +1,40 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
-
-const SERVICES = [
-  {
-    id: "01",
-    title: "Frontend Development",
-    description: "Building responsive, accessible, and highly interactive user interfaces using modern frameworks like React and Next.js.",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200",
-  },
-  {
-    id: "02",
-    title: "Backend Architecture",
-    description: "Designing scalable APIs and microservices with robust database structures for high-performance applications.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
-  },
-  {
-    id: "03",
-    title: "UI/UX Design",
-    description: "Crafting intuitive user experiences with a focus on modern aesthetics, usability, and seamless interactions.",
-    image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
-  },
-  {
-    id: "04",
-    title: "Mobile Development",
-    description: "Creating cross-platform mobile applications that deliver native-like performance and beautiful interfaces.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
-  },
-];
+import { useLanguage } from "./LanguageContext";
 
 const AUTO_PLAY_DURATION = 5000;
 
 export default function MyService() {
+  const { t } = useLanguage();
+
+  const SERVICES = [
+    {
+      id: "01",
+      title: t('services.s1_title'),
+      description: t('services.s1_desc'),
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200",
+    },
+    {
+      id: "02",
+      title: t('services.s2_title'),
+      description: t('services.s2_desc'),
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200",
+    },
+    {
+      id: "03",
+      title: t('services.s3_title'),
+      description: t('services.s3_desc'),
+      image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1200",
+    },
+    {
+      id: "04",
+      title: t('services.s4_title'),
+      description: t('services.s4_desc'),
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -91,10 +94,10 @@ export default function MyService() {
           transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
         >
           <span className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4 transition-colors duration-500">
-            What I Do
+            {t('services.label')}
           </span>
           <h2 className="tracking-tighter text-balance text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white transition-colors duration-500 max-w-3xl">
-            Specialized Services
+            {t('services.title')}
           </h2>
         </motion.div>
 

@@ -3,47 +3,54 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
 import GradientWaves from './GradientWaves';
 import { useTheme } from './ThemeProvider';
-
-const PROJECTS = [
-  {
-    id: "griche",
-    name: "Griche Project",
-    category: "Product Advertising",
-    description: "Website pengiklanan produk usaha dengan desain menarik untuk meningkatkan konversi.",
-    url: "https://griche-project.vercel.app",
-  },
-  {
-    id: "arthamuda",
-    name: "ArthaMuda",
-    category: "Financial Management",
-    description: "Aplikasi web kelola keuangan modern.",
-    note: "Demo login: demo@demo.com / demo123",
-    url: "https://artha-muda-web-p7l3.vercel.app",
-  },
-  {
-    id: "company",
-    name: "Corporate Profile",
-    category: "Corporate Website",
-    description: "Company profile profesional yang menonjolkan kredibilitas perusahaan.",
-    url: "https://company-profile-example-nine.vercel.app",
-  },
-  {
-    id: "travel",
-    name: "Travel Marketing",
-    category: "Tourism Website",
-    description: "Website travel marketing untuk mempromosikan destinasi wisata dan paket liburan.",
-    url: "https://travel-marketing-website-example-4s.vercel.app/",
-  },
-  {
-    id: "school",
-    name: "School Portal",
-    category: "Education Website",
-    description: "Sistem informasi sekolah terpadu dengan antarmuka yang bersih dan mudah digunakan.",
-    url: "https://school-website-example.vercel.app/",
-  }
-];
+import { useLanguage } from './LanguageContext';
 
 export default function Projects() {
+  const { t } = useLanguage();
+
+  const PROJECTS = [
+    {
+      id: "griche",
+      name: t('projects.p1_name'),
+      category: t('projects.p1_cat'),
+      description: t('projects.p1_desc'),
+      url: "https://griche-project.vercel.app",
+      note: t('projects.p1_note')
+    },
+    {
+      id: "arthamuda",
+      name: t('projects.p2_name'),
+      category: t('projects.p2_cat'),
+      description: t('projects.p2_desc'),
+      url: "https://artha-muda-web-p7l3.vercel.app",
+      note: t('projects.p2_note')
+    },
+    {
+      id: "company",
+      name: t('projects.p3_name'),
+      category: t('projects.p3_cat'),
+      description: t('projects.p3_desc'),
+      url: "https://company-profile-example-nine.vercel.app",
+      note: t('projects.p3_note')
+    },
+    {
+      id: "travel",
+      name: t('projects.p4_name'),
+      category: t('projects.p4_cat'),
+      description: t('projects.p4_desc'),
+      url: "https://travel-marketing-website-example-4s.vercel.app/",
+      note: t('projects.p4_note')
+    },
+    {
+      id: "school",
+      name: t('projects.p5_name'),
+      category: t('projects.p5_cat'),
+      description: t('projects.p5_desc'),
+      url: "https://school-website-example.vercel.app/",
+      note: t('projects.p5_note')
+    }
+  ];
+
   const [activeProject, setActiveProject] = useState(PROJECTS[0]);
   const { theme } = useTheme();
   const isDark = theme === 'dark';
@@ -71,13 +78,13 @@ export default function Projects() {
           transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
         >
           <span className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4 block transition-colors duration-500">
-            Case Studies
+            {t('projects.label')}
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight transition-colors duration-500">
-            Interactive Projects
+            {t('projects.title')}
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg transition-colors duration-500">
-            A selection of my recent works. Select a project from the list to explore it live directly in the browser mockup below.
+            {t('projects.desc')}
           </p>
         </motion.div>
 

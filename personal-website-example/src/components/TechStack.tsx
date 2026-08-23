@@ -1,4 +1,3 @@
-
 import ScrollVelocity from './ScrollVelocity';
 import {
   SiReact, SiTailwindcss, SiNextdotjs, SiJavascript,
@@ -6,8 +5,11 @@ import {
   SiMysql, SiVercel, SiNetlify, SiPython, SiCplusplus, SiGo
 } from 'react-icons/si';
 import { FaPaintBrush, FaProjectDiagram } from 'react-icons/fa';
+import { useLanguage } from './LanguageContext';
 
 export default function TechStack() {
+  const { t } = useLanguage();
+
   const row1 = (
     <div className="flex items-center gap-8 mx-4">
       <div className="flex items-center gap-3"><SiReact /> ReactJS</div>
@@ -39,9 +41,9 @@ export default function TechStack() {
   return (
     <section className="py-20 bg-white dark:bg-black transition-colors duration-500 overflow-hidden">
       <div className="max-w-6xl mx-auto px-8 mb-12 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-zinc-900 dark:text-white transition-colors duration-500">Tech Stack & Tools</h2>
+        <h2 className="text-3xl font-bold mb-4 text-zinc-900 dark:text-white transition-colors duration-500">{t('tech.title')}</h2>
         <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto transition-colors duration-500">
-          A comprehensive suite of modern technologies and tools I use to build exceptional digital experiences.
+          {t('tech.subtitle')}
         </p>
       </div>
 

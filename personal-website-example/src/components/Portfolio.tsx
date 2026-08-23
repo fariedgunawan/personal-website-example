@@ -1,37 +1,39 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
+import { useLanguage } from './LanguageContext';
 
 export default function Portfolio() {
+  const { t } = useLanguage();
   const projects = [
     {
-      title: "E-Commerce Platform",
-      category: "Web Development",
+      title: t('portfolio.p1_title'),
+      category: t('portfolio.p1_cat'),
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
     },
     {
-      title: "Fintech Dashboard",
-      category: "UI/UX Design",
+      title: t('portfolio.p2_title'),
+      category: t('portfolio.p2_cat'),
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
     },
     {
-      title: "AI Analytics Tool",
-      category: "Cloud Solutions",
+      title: t('portfolio.p3_title'),
+      category: t('portfolio.p3_cat'),
       image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1000&auto=format&fit=crop",
     },
     {
-      title: "Healthcare App",
-      category: "Mobile Development",
+      title: t('portfolio.p4_title'),
+      category: t('portfolio.p4_cat'),
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1000&auto=format&fit=crop",
     },
     {
-      title: "Smart Home Interface",
-      category: "IoT Solutions",
+      title: t('portfolio.p5_title'),
+      category: t('portfolio.p5_cat'),
       image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1000&auto=format&fit=crop",
     },
     {
-      title: "Virtual Reality Tour",
-      category: "AR/VR Experiences",
+      title: t('portfolio.p6_title'),
+      category: t('portfolio.p6_cat'),
       image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1000&auto=format&fit=crop",
     }
   ];
@@ -58,21 +60,21 @@ export default function Portfolio() {
       {/* Header & Controls */}
       <div className="max-w-7xl mx-auto px-8 mb-12 md:mb-16">
         <div className="flex flex-col md:flex-row justify-between items-end gap-6">
-          <motion.div
+          <motion.div 
+            className="flex-1"
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-            className="flex-1"
           >
             <span className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4 block transition-colors duration-500">
-              Featured Works
+              {t('portfolio.label')}
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white mb-4 tracking-tight transition-colors duration-500">
-              Our Work
+              {t('portfolio.title')}
             </h2>
             <p className="text-zinc-600 dark:text-zinc-400 max-w-xl text-lg transition-colors duration-500">
-              Explore some of our most impactful projects. We take pride in delivering excellence across every industry.
+              {t('portfolio.desc')}
             </p>
           </motion.div>
 

@@ -1,34 +1,34 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const faqs = [
-  {
-    question: "How do you decide which problems to solve first?",
-    answer:
-      "We map opportunities across impact, feasibility, and effort, then prototype the riskiest assumption within 72 hours to make sure we are shipping momentum, not guesswork.",
-    meta: "Discovery",
-  },
-  {
-    question: "What does collaboration look like once we start?",
-    answer:
-      "A dedicated trio of design, engineering, and strategy meets daily in a shared async dashboard. Decisions are recorded in-line, so the team, stakeholders, and audit trail stay perfectly aligned.",
-    meta: "Collaboration",
-  },
-  {
-    question: "Can you adapt to an existing design system or stack?",
-    answer:
-      "Yes. We map tokens, components, and build steps into our pipeline on day one. If a gap appears, we patch the system with regression tests so velocity never compromises fidelity.",
-    meta: "Systems",
-  },
-  {
-    question: "How is quality validated before release?",
-    answer:
-      "Accessibility sweeps, automated visual diffs, and performance budgets run on every merge. We ship only after the experience hits the expected thresholds on real devices.",
-    meta: "Quality",
-  },
-];
+import { useLanguage } from "./LanguageContext";
 
 export default function FAQ() {
+  const { t } = useLanguage();
+
+  const faqs = [
+    {
+      question: t('faq.q1'),
+      answer: t('faq.a1'),
+      meta: "Discovery",
+    },
+    {
+      question: t('faq.q2'),
+      answer: t('faq.a2'),
+      meta: "Collaboration",
+    },
+    {
+      question: t('faq.q3'),
+      answer: t('faq.a3'),
+      meta: "Systems",
+    },
+    {
+      question: t('faq.q4'),
+      answer: t('faq.a4'),
+      meta: "Quality",
+    },
+  ];
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleQuestion = (index: number) => {
@@ -48,13 +48,13 @@ export default function FAQ() {
           transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
         >
           <span className="text-[12px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-[0.4em] mb-4 block transition-colors duration-500">
-            Questions
+            {t('faq.label')}
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight transition-colors duration-500">
-            Focus on the signal, <br className="hidden md:block"/> not the noise.
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-zinc-900 dark:text-white mb-6 tracking-tight transition-colors duration-500 max-w-xl">
+            {t('faq.title1')}<span className="text-zinc-500 dark:text-zinc-400">{t('faq.title2')}</span>
           </h2>
-          <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg transition-colors duration-500">
-            Everything you need to know about partnering with our team, condensed into calm clarity.
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-lg text-lg transition-colors duration-500">
+            {t('faq.desc')}
           </p>
         </motion.div>
 
