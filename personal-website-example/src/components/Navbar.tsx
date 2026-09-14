@@ -3,11 +3,14 @@ import { useTheme } from './ThemeProvider';
 import { FiSun, FiMoon, FiGlobe } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useLanguage } from './LanguageContext';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,16 +34,16 @@ export default function Navbar() {
             : 'max-w-full px-6 md:px-12 py-4 rounded-none shadow-none border-t-0 border-l-0 border-r-0 sm:border-t-0 sm:border-l-0 sm:border-r-0'
           }`}
       >
-        <a href="#" className="font-bold text-2xl tracking-tighter text-zinc-900 dark:text-white">
+        <Link to="/" className="font-bold text-2xl tracking-tighter text-zinc-900 dark:text-white">
           Lorem<span className="text-zinc-500 dark:text-zinc-400">Dev</span>
-        </a>
+        </Link>
 
         <ul className="hidden md:flex gap-6 lg:gap-8 items-center font-medium">
-          <li><a href="#hero" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
-          <li><a href="#about-us" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
-          <li><a href="#my-service" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
-          <li><a href="#projects" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</a></li>
-          <li><a href="#faq" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
+          <li><a href={isHome ? "#hero" : "/#hero"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
+          <li><a href={isHome ? "#about-us" : "/#about-us"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
+          <li><a href={isHome ? "#my-service" : "/#my-service"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
+          <li><Link to="/case-studies" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</Link></li>
+          <li><a href={isHome ? "#faq" : "/#faq"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
         </ul>
 
         <div className="flex items-center gap-4">
@@ -63,7 +66,7 @@ export default function Navbar() {
             </span>
           </button>
 
-          <a href="#get-in-touch" className="px-5 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold shadow-lg shadow-black/10 dark:shadow-white/10 hover:scale-105 transition-transform text-sm hidden sm:block">
+          <a href={isHome ? "#get-in-touch" : "/#get-in-touch"} className="px-5 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black font-semibold shadow-lg shadow-black/10 dark:shadow-white/10 hover:scale-105 transition-transform text-sm hidden sm:block">
             {t('nav.contact')}
           </a>
         </div>

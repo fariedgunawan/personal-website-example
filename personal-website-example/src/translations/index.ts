@@ -12,7 +12,7 @@ export const translations = {
     hero: {
       badge: "Software Engineer & System Architect",
       title: "Crafting Seamless",
-      rotating: ["Digital Experiences", "Web Applications", "Scalable Systems", "User Interfaces"],
+      rotating: ["Digital Experiences", "Web Applications", "Scalable Systems", "User Interfaces", "Data Analytics", "AI Solutions"],
       subtitle: "I specialize in building intuitive UI/UX, robust frontend architectures, and scalable systems that solve complex problems and delight users.",
       cta_primary: "Get in Touch",
       cta_secondary: "Show Portfolio"
@@ -31,7 +31,11 @@ export const translations = {
       s3_title: "UI/UX Design",
       s3_desc: "Crafting intuitive user experiences with a focus on modern aesthetics, usability, and seamless interactions.",
       s4_title: "Mobile Development",
-      s4_desc: "Creating cross-platform mobile applications that deliver native-like performance and beautiful interfaces."
+      s4_desc: "Creating cross-platform mobile applications that deliver native-like performance and beautiful interfaces.",
+      s5_title: "Data Analytics",
+      s5_desc: "Transforming raw data into actionable insights through advanced statistical analysis and data visualization.",
+      s6_title: "AI Solutions",
+      s6_desc: "Developing intelligent systems and integrating machine learning models to automate and optimize workflows."
     },
     about: {
       label: "Behind the Code",
@@ -83,7 +87,16 @@ export const translations = {
       p5_name: "School Website",
       p5_cat: "Education Portal",
       p5_desc: "An informative school portal with galleries, news, and facility showcases.",
-      p5_note: "Educational Hub"
+      p5_note: "Educational Hub",
+      p6_name: "Security Outsorcing Company",
+      p6_cat: "Company Profile",
+      p6_desc: "Company profile portfolio for a security guard outsourcing company.",
+      p6_note: "Outsourcing Services",
+      p7_name: "System Admin for Security Company",
+      p7_cat: "Web Application",
+      p7_desc: "Application feature promotion system for security company.",
+      p7_note: "Feature Promotion",
+      view_all: "View All Case Studies"
     },
     faq: {
       label: "Questions",
@@ -131,7 +144,7 @@ export const translations = {
     hero: {
       badge: "Insinyur Perangkat Lunak & Arsitek Sistem",
       title: "Menciptakan",
-      rotating: ["Pengalaman Digital", "Aplikasi Web", "Sistem Terukur", "Antarmuka Pengguna"],
+      rotating: ["Pengalaman Digital", "Aplikasi Web", "Sistem Terukur", "Antarmuka Pengguna", "Analitik Data", "Solusi AI"],
       subtitle: "Saya ahli dalam membangun UI/UX yang intuitif, arsitektur frontend yang kuat, dan sistem yang dapat diskalakan untuk memecahkan masalah kompleks dan memuaskan pengguna.",
       cta_primary: "Hubungi Saya",
       cta_secondary: "Lihat Portofolio"
@@ -150,7 +163,11 @@ export const translations = {
       s3_title: "Desain UI/UX",
       s3_desc: "Menciptakan pengalaman pengguna yang intuitif dengan fokus pada estetika modern, kegunaan, dan interaksi yang mulus.",
       s4_title: "Pengembangan Seluler",
-      s4_desc: "Membuat aplikasi seluler lintas platform yang memberikan kinerja seperti aplikasi bawaan dan antarmuka yang indah."
+      s4_desc: "Membuat aplikasi seluler lintas platform yang memberikan kinerja seperti aplikasi bawaan dan antarmuka yang indah.",
+      s5_title: "Analitik Data",
+      s5_desc: "Mengubah data mentah menjadi wawasan bermakna melalui analisis statistik mendalam dan visualisasi data.",
+      s6_title: "Solusi AI",
+      s6_desc: "Mengembangkan sistem cerdas dan mengintegrasikan model pembelajaran mesin untuk mengotomatisasi alur kerja."
     },
     about: {
       label: "Di Balik Kode",
@@ -202,7 +219,16 @@ export const translations = {
       p5_name: "Website Sekolah",
       p5_cat: "Portal Pendidikan",
       p5_desc: "Portal sekolah informatif dengan galeri, berita, dan pameran fasilitas.",
-      p5_note: "Pusat Pendidikan"
+      p5_note: "Pusat Pendidikan",
+      p6_name: "Profil Team BGS",
+      p6_cat: "Profil Perusahaan",
+      p6_desc: "Portofolio company profile untuk perusahaan outsourcing satpam.",
+      p6_note: "Layanan Outsourcing",
+      p7_name: "Sistem Admin untuk Perusahaan Keamanan",
+      p7_cat: "Aplikasi Web",
+      p7_desc: "Promosi fitur sistem aplikasi untuk perusahaan keamanan.",
+      p7_note: "Promosi Fitur",
+      view_all: "Lihat Semua Studi Kasus"
     },
     faq: {
       label: "Pertanyaan",

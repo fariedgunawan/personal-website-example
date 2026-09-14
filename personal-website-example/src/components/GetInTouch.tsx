@@ -78,7 +78,7 @@ export default function GetInTouch() {
                
                <form 
                  onSubmit={(e) => e.preventDefault()}
-                 className="relative bg-white/60 dark:bg-zinc-900/60 backdrop-blur-2xl border border-zinc-200/50 dark:border-zinc-700/50 p-8 md:p-10 rounded-[2rem] shadow-2xl flex flex-col gap-6 overflow-hidden transition-colors duration-500"
+                 className="relative bg-white/60 dark:bg-zinc-900/60 backdrop-blur-2xl border border-zinc-200/50 dark:border-zinc-800/50 p-8 md:p-10 rounded-[2rem] shadow-2xl flex flex-col gap-6 overflow-hidden transition-colors duration-500"
                >
                   {/* Subtle noise/texture overlay for premium glass look */}
                   <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }}></div>

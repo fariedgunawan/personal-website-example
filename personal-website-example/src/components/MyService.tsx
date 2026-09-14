@@ -33,6 +33,18 @@ export default function MyService() {
       description: t('services.s4_desc'),
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200",
     },
+    {
+      id: "05",
+      title: t('services.s5_title') as string,
+      description: t('services.s5_desc') as string,
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200",
+    },
+    {
+      id: "06",
+      title: t('services.s6_title') as string,
+      description: t('services.s6_desc') as string,
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200",
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -165,14 +177,14 @@ export default function MyService() {
             </motion.div>
           </div>
 
-          {/* Right Column: Accordion Content */}
-          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-2">
+          <div className="lg:col-span-5 flex flex-col justify-center order-2 lg:order-2 h-full">
             <motion.div 
-              className="flex flex-col space-y-0 relative h-[440px] md:h-[500px] lg:h-[560px] justify-start"
+              className="flex flex-col space-y-0 relative max-h-[500px] lg:max-h-[600px] overflow-y-auto hide-scrollbar pr-2 md:pr-4 justify-start mask-image-vertical"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.3, delay: 0.4 }}
+              style={{ maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)', WebkitMaskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
             >
               {SERVICES.map((service, index) => {
                 const isActive = activeIndex === index;
@@ -180,10 +192,10 @@ export default function MyService() {
                   <button
                     key={service.id}
                     onClick={() => handleTabClick(index)}
-                    className={`group relative flex items-start gap-6 py-6 md:py-8 text-left transition-all duration-500 border-t border-zinc-200 dark:border-zinc-800 first:border-0 ${isActive ? "text-zinc-900 dark:text-white" : "text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
+                    className={`group relative flex items-start gap-4 md:gap-5 py-4 md:py-5 text-left transition-all duration-500 border-t border-zinc-200 dark:border-zinc-800 first:border-0 ${isActive ? "text-zinc-900 dark:text-white" : "text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white"
                       }`}
                   >
-                    <div className="absolute left-[-16px] md:left-[-32px] top-0 bottom-0 w-[2px] bg-zinc-200 dark:bg-zinc-800 transition-colors duration-500">
+                    <div className="absolute left-[-12px] md:left-[-20px] top-0 bottom-0 w-[2px] bg-zinc-200 dark:bg-zinc-800 transition-colors duration-500">
                       {isActive && (
                         <motion.div
                           key={`progress-${index}-${isPaused}`}
@@ -195,13 +207,13 @@ export default function MyService() {
                       )}
                     </div>
 
-                    <span className="text-[10px] md:text-[12px] font-bold mt-1 tabular-nums opacity-50 uppercase tracking-widest">
+                    <span className="text-[10px] md:text-[11px] font-bold mt-1 tabular-nums opacity-50 uppercase tracking-widest shrink-0">
                       {service.id}
                     </span>
 
-                    <div className="flex flex-col gap-2 flex-1">
+                    <div className="flex flex-col gap-1.5 flex-1 pb-2">
                       <span
-                        className={`text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight transition-colors duration-500 ${isActive ? "text-zinc-900 dark:text-white" : ""
+                        className={`text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight transition-colors duration-500 ${isActive ? "text-zinc-900 dark:text-white" : ""
                           }`}
                       >
                         {service.title}
@@ -216,7 +228,7 @@ export default function MyService() {
                             transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                             className="overflow-hidden"
                           >
-                            <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base font-medium leading-relaxed max-w-sm pb-2 mt-2 transition-colors duration-500">
+                            <p className="text-zinc-600 dark:text-zinc-400 text-xs md:text-sm font-medium leading-relaxed max-w-sm pb-1 mt-1 transition-colors duration-500">
                               {service.description}
                             </p>
                           </motion.div>

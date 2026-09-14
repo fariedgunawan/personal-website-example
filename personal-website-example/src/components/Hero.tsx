@@ -95,7 +95,7 @@ export default function Hero() {
             href="#portfolio"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-white hover:bg-zinc-100 text-black border border-zinc-300 hover:border-zinc-400 dark:bg-black dark:hover:bg-zinc-900 dark:text-white dark:border-zinc-700 dark:hover:border-zinc-500 font-semibold transition-colors duration-500 w-full sm:w-auto rounded-2xl"
+            className="px-8 py-3 bg-white hover:bg-zinc-100 text-black border border-zinc-300 hover:border-zinc-400 dark:bg-black dark:hover:bg-zinc-900 dark:text-white dark:border-zinc-800 dark:hover:border-zinc-500 font-semibold transition-colors duration-500 w-full sm:w-auto rounded-2xl"
           >
             {t('hero.cta_secondary')}
           </motion.a>

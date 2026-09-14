@@ -4,11 +4,29 @@ import { FiExternalLink } from 'react-icons/fi';
 import GradientWaves from './GradientWaves';
 import { useTheme } from './ThemeProvider';
 import { useLanguage } from './LanguageContext';
+import { Link } from 'react-router-dom';
+import { FiArrowRight } from 'react-icons/fi';
 
 export default function Projects() {
   const { t } = useLanguage();
 
   const PROJECTS = [
+    {
+      id: "bgs-profile",
+      name: t('projects.p6_name') as string,
+      category: t('projects.p6_cat') as string,
+      description: t('projects.p6_desc') as string,
+      url: "https://teambgs.ninja",
+      note: t('projects.p6_note') as string
+    },
+    {
+      id: "bgs-system",
+      name: t('projects.p7_name') as string,
+      category: t('projects.p7_cat') as string,
+      description: t('projects.p7_desc') as string,
+      url: "https://teambgs.ninja/sistem",
+      note: t('projects.p7_note') as string
+    },
     {
       id: "griche",
       name: t('projects.p1_name'),
@@ -153,7 +171,7 @@ export default function Projects() {
               transition={{ duration: 0.8, type: "spring", bounce: 0.3, delay: 0.2 }}
             >
               {/* Browser Header */}
-              <div className="h-12 md:h-14 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-zinc-950/80 backdrop-blur-md flex items-center px-4 md:px-6 transition-colors duration-500 relative">
+              <div className="h-12 md:h-14 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50/80 dark:bg-black/80 backdrop-blur-md flex items-center px-4 md:px-6 transition-colors duration-500 relative">
                 <div className="flex gap-2 absolute left-4 md:left-6">
                   <div className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-[#FF5F56] border border-[#E0443E]"></div>
                   <div className="w-3 h-3 md:w-3.5 md:h-3.5 rounded-full bg-[#FFBD2E] border border-[#DEA123]"></div>
@@ -179,7 +197,7 @@ export default function Projects() {
               <div className="flex-1 relative bg-zinc-100 dark:bg-zinc-900">
                 {/* Loader Placeholder */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-zinc-300 dark:border-zinc-700 border-t-zinc-900 dark:border-t-white animate-spin"></div>
+                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-4 border-zinc-300 dark:border-zinc-800 border-t-zinc-900 dark:border-t-white animate-spin"></div>
                 </div>
                 
                 <AnimatePresence mode="wait">
@@ -199,6 +217,23 @@ export default function Projects() {
             </motion.div>
           </div>
           
+          {/* Bottom Button */}
+          <motion.div 
+            className="flex justify-center mt-6 md:mt-10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <Link 
+              to="/case-studies" 
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-full font-bold text-sm md:text-base hover:scale-105 transition-all shadow-lg hover:shadow-xl dark:shadow-white/10"
+            >
+              {t('projects.view_all')}
+              <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+
         </div>
       </div>
     </section>

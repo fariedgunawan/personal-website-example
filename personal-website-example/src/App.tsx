@@ -1,31 +1,24 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { LanguageProvider } from "./components/LanguageContext";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import AboutUs from "./components/AboutUs";
-import TechStack from "./components/TechStack";
-import MyService from "./components/MyService";
-import Projects from "./components/Projects";
-import FAQ from "./components/FAQ";
-import GetInTouch from "./components/GetInTouch";
-import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import CaseStudiesPage from "./pages/CaseStudiesPage";
 
 function App() {
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <Hero />
-          <TechStack />
-          <MyService />
-          <AboutUs />
-          <Projects />
-          <FAQ />
-          <GetInTouch />
-          <Footer />
-        </div>
+        <Router>
+          <div className="flex flex-col min-h-screen bg-white dark:bg-black transition-colors duration-500">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+            </Routes>
+          </div>
+        </Router>
       </ThemeProvider>
     </LanguageProvider>
   );
