@@ -16,21 +16,21 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <nav className={`fixed z-50 w-full flex justify-center transition-all duration-500 ease-in-out ${scrolled ? 'top-4 px-4 md:px-6' : 'top-0 px-0'}`}>
-      <motion.div 
+      <motion.div
         layout
         transition={{ type: "spring", stiffness: 400, damping: 30 }}
         className={`w-full bg-white/40 dark:bg-black/40 backdrop-blur-2xl backdrop-saturate-150 border-b sm:border border-zinc-200 dark:border-zinc-800 flex items-center justify-between transition-all duration-500 ease-in-out
-          ${scrolled 
-            ? 'max-w-5xl px-6 py-3 rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]' 
+          ${scrolled
+            ? 'max-w-5xl px-6 py-3 rounded-full shadow-[0_8px_32px_0_rgba(0,0,0,0.15)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]'
             : 'max-w-full px-6 md:px-12 py-4 rounded-none shadow-none border-t-0 border-l-0 border-r-0 sm:border-t-0 sm:border-l-0 sm:border-r-0'
           }`}
       >
@@ -42,6 +42,7 @@ export default function Navbar() {
           <li><a href={isHome ? "#hero" : "/#hero"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.home')}</a></li>
           <li><a href={isHome ? "#about-us" : "/#about-us"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.about')}</a></li>
           <li><a href={isHome ? "#my-service" : "/#my-service"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.services')}</a></li>
+          <li><Link to="/pricing" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{language === 'id' ? 'Harga' : 'Pricing'}</Link></li>
           <li><Link to="/case-studies" className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.projects')}</Link></li>
           <li><a href={isHome ? "#faq" : "/#faq"} className="text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors">{t('nav.faq')}</a></li>
         </ul>

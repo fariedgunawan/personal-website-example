@@ -6,6 +6,7 @@ import Projects from "../components/Projects";
 import FAQ from "../components/FAQ";
 import GetInTouch from "../components/GetInTouch";
 import Footer from "../components/Footer";
+import { PricingSection } from "../components/ui/pricing-section";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <MyService />
       <AboutUs />
       <Projects />
+      <PricingSection />
       <FAQ />
       <GetInTouch />
       <Footer />

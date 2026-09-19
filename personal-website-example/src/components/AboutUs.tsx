@@ -1,10 +1,69 @@
 import { motion, type Variants } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
-import me from "../assets/faried.webp"
 import { useLanguage } from './LanguageContext';
+
+import img1 from '../assets/aboutme_assets/1.webp';
+import img2 from '../assets/aboutme_assets/2.webp';
+import img3 from '../assets/aboutme_assets/3.webp';
+import img4 from '../assets/aboutme_assets/4.webp';
+import img5 from '../assets/aboutme_assets/5.webp';
+import img6 from '../assets/aboutme_assets/6.webp';
+import img7 from '../assets/aboutme_assets/7.webp';
+import img8 from '../assets/aboutme_assets/8.webp';
+import img9 from '../assets/aboutme_assets/9.webp';
+import img10 from '../assets/aboutme_assets/10.webp';
+import { useState, useEffect, useRef } from 'react';
+
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+
+const shuffle = (array: any[]) => {
+  let currentIndex = array.length, randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+  return array;
+};
+
+const allImages = images.map((src, id) => ({ id, src }));
+
+const generateSquares = () => {
+  return shuffle([...allImages]).map((sq, index) => (
+    <motion.div
+      key={sq.id}
+      layout
+      transition={{ duration: 1.5, type: "spring" }}
+      className={`w-full h-full rounded-lg md:rounded-xl shadow-sm bg-zinc-200 dark:bg-zinc-800 ${
+        index < 2 ? 'col-span-2 row-span-2' : ''
+      }`}
+      style={{
+        backgroundImage: `url(${sq.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+      }}
+    ></motion.div>
+  ));
+};
 
 export default function AboutUs() {
   const { t } = useLanguage();
+  
+  const timeoutRef = useRef<any>(null);
+  const [squares, setSquares] = useState(generateSquares());
+
+  useEffect(() => {
+    const shuffleSquares = () => {
+      setSquares(generateSquares());
+      timeoutRef.current = setTimeout(shuffleSquares, 3000);
+    };
+    
+    // start shuffle loop
+    shuffleSquares();
+    
+    return () => clearTimeout(timeoutRef.current);
+  }, []);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,26 +128,10 @@ export default function AboutUs() {
           </motion.div>
 
           {/* Right Column: Image and Decorative Elements */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="relative w-full max-w-md aspect-[4/5] rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl"
-            >
-              <img
-                src={me}
-                alt="Portrait"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-              />
-              <div className="absolute inset-0 border border-black/10 dark:border-white/10 rounded-2xl md:rounded-[2rem] pointer-events-none" />
-            </motion.div>
-
-
-
-
-
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end min-h-[400px]">
+            <div className="grid grid-cols-4 grid-rows-4 w-full max-w-lg xl:max-w-xl aspect-square gap-2">
+              {squares}
+            </div>
           </div>
 
         </div>

@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 
+import PricingPage from "./pages/PricingPage";
+
 function App() {
   return (
     <LanguageProvider>
@@ -16,6 +18,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
             </Routes>
           </div>
         </Router>

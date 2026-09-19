@@ -10,7 +10,7 @@ export const translations = {
       contact: "Contact Us"
     },
     hero: {
-      badge: "Software Engineer & System Architect",
+      badge: "Software Engineer & AI Solutions",
       title: "Crafting Seamless",
       rotating: ["Digital Experiences", "Web Applications", "Scalable Systems", "User Interfaces", "Data Analytics", "AI Solutions"],
       subtitle: "I specialize in building intuitive UI/UX, robust frontend architectures, and scalable systems that solve complex problems and delight users.",
@@ -124,6 +124,50 @@ export const translations = {
       msg: "Tell me about your project...",
       send: "Send Message"
     },
+    pricing_page: {
+      title: "Detailed Pricing Plans",
+      subtitle: "Transparent pricing tailored for every stage of your project's lifecycle.",
+      tabs: {
+        frontend: "Frontend",
+        backend: "Backend",
+        uiux: "UI/UX",
+        mobile: "Mobile",
+        data: "Data Analytics",
+        ai: "AI Solutions"
+      },
+      packages: {
+        frontend: [
+          { name: "Basic", desc: "For simple landing pages and portfolios.", price: "3.5", features: ["React / Next.js Setup", "Responsive Layout", "Basic Animations", "3 Pages max"], isPopular: false },
+          { name: "Pro", desc: "For corporate websites and complex web apps.", price: "5.5", features: ["Interactive Animations", "SEO Friendly", "State Management", "Up to 10 Pages"], isPopular: true },
+          { name: "Enterprise", desc: "For large scale custom web applications.", price: "Custom", features: ["Custom Architecture", "Performance Optimization", "Dedicated Support", "Unlimited Pages"], isPopular: false }
+        ],
+        backend: [
+          { name: "Basic", desc: "Simple API integration and small databases.", price: "4.5", features: ["RESTful API", "Basic Database", "Authentication", "Cloud Deployment"], isPopular: false },
+          { name: "Pro", desc: "Complex microservices and scalable architecture.", price: "7.0", features: ["GraphQL API", "Advanced Database", "Caching System", "Dockerization"], isPopular: true },
+          { name: "Enterprise", desc: "High availability distributed systems.", price: "Custom", features: ["Microservices Architecture", "Load Balancing", "High Availability", "24/7 Monitoring"], isPopular: false }
+        ],
+        uiux: [
+          { name: "Basic", desc: "Simple wireframes and UI designs.", price: "2.5", features: ["Wireframing", "Basic Prototyping", "Up to 5 Screens", "2 Revisions"], isPopular: false },
+          { name: "Pro", desc: "High-fidelity interactive prototypes.", price: "4.0", features: ["High-fidelity UI", "Interactive Prototype", "User Flow Optimization", "4 Revisions"], isPopular: true },
+          { name: "Enterprise", desc: "Complete design systems and research.", price: "Custom", features: ["Design System Creation", "User Research", "Usability Testing", "Unlimited Revisions"], isPopular: false }
+        ],
+        mobile: [
+          { name: "Basic", desc: "Simple mobile applications for one platform.", price: "6.0", features: ["Cross-platform Setup", "Basic UI Elements", "API Integration", "App Store Submission"], isPopular: false },
+          { name: "Pro", desc: "Feature-rich cross platform apps.", price: "9.0", features: ["Native Performance", "Push Notifications", "Local Storage", "Advanced Animations"], isPopular: true },
+          { name: "Enterprise", desc: "Large scale mobile applications.", price: "Custom", features: ["Custom Native Modules", "Complex State", "Hardware Integration", "Ongoing Support"], isPopular: false }
+        ],
+        data: [
+          { name: "Basic", desc: "Basic data modeling and reporting.", price: "5.0", features: ["Data Modeling", "Basic Reporting", "Data Cleaning", "Weekly Insights"], isPopular: false },
+          { name: "Pro", desc: "Advanced analytics and interactive dashboards.", price: "8.0", features: ["Statistical Analysis", "Interactive Dashboards", "Predictive Models", "Real-time Data"], isPopular: true },
+          { name: "Enterprise", desc: "Big data infrastructure and deep analysis.", price: "Custom", features: ["Big Data Architecture", "Data Pipeline setup", "Deep Learning Models", "Dedicated Analyst"], isPopular: false }
+        ],
+        ai: [
+          { name: "Basic", desc: "Integration of existing AI APIs.", price: "7.0", features: ["API Integration (OpenAI etc)", "Basic Prompt Engineering", "Workflow Automation", "Simple Chatbots"], isPopular: false },
+          { name: "Pro", desc: "Custom model fine-tuning and intelligent systems.", price: "12.0", features: ["Model Fine-tuning", "Intelligent Systems", "RAG Implementation", "Advanced Chatbots"], isPopular: true },
+          { name: "Enterprise", desc: "Training custom models from scratch.", price: "Custom", features: ["Custom ML Models", "Large Scale Data Training", "On-premise Deployment", "Dedicated AI Engineer"], isPopular: false }
+        ]
+      }
+    },
     footer: {
       subtitle: "Building extraordinary digital experiences.",
       rights: "All rights reserved.",
@@ -142,7 +186,7 @@ export const translations = {
       contact: "Hubungi Kami"
     },
     hero: {
-      badge: "Insinyur Perangkat Lunak & Arsitek Sistem",
+      badge: "Perancangan Perangkat Lunak & Solusi Kecerdasan Buatan",
       title: "Menciptakan",
       rotating: ["Pengalaman Digital", "Aplikasi Web", "Sistem Terukur", "Antarmuka Pengguna", "Analitik Data", "Solusi AI"],
       subtitle: "Saya ahli dalam membangun UI/UX yang intuitif, arsitektur frontend yang kuat, dan sistem yang dapat diskalakan untuk memecahkan masalah kompleks dan memuaskan pengguna.",
@@ -255,6 +299,50 @@ export const translations = {
       email: "Email Anda",
       msg: "Ceritakan tentang proyek Anda...",
       send: "Kirim Pesan"
+    },
+    pricing_page: {
+      title: "Rencana Harga Detail",
+      subtitle: "Harga transparan yang disesuaikan untuk setiap tahap siklus proyek Anda.",
+      tabs: {
+        frontend: "Frontend",
+        backend: "Backend",
+        uiux: "UI/UX",
+        mobile: "Seluler",
+        data: "Analitik Data",
+        ai: "Solusi AI"
+      },
+      packages: {
+        frontend: [
+          { name: "Dasar", desc: "Untuk landing page sederhana dan portofolio.", price: "3.5", features: ["Pengaturan React / Next.js", "Tata Letak Responsif", "Animasi Dasar", "Maksimal 3 Halaman"], isPopular: false },
+          { name: "Pro", desc: "Untuk situs web perusahaan dan aplikasi web kompleks.", price: "5.5", features: ["Animasi Interaktif", "Ramah SEO", "Manajemen State", "Hingga 10 Halaman"], isPopular: true },
+          { name: "Enterprise", desc: "Untuk aplikasi web kustom skala besar.", price: "Custom", features: ["Arsitektur Kustom", "Optimisasi Performa", "Dukungan Khusus", "Halaman Tak Terbatas"], isPopular: false }
+        ],
+        backend: [
+          { name: "Dasar", desc: "Integrasi API sederhana dan basis data kecil.", price: "4.5", features: ["API RESTful", "Basis Data Dasar", "Autentikasi", "Penyebaran Cloud"], isPopular: false },
+          { name: "Pro", desc: "Layanan mikro kompleks dan arsitektur terukur.", price: "7.0", features: ["API GraphQL", "Basis Data Lanjutan", "Sistem Caching", "Dockerisasi"], isPopular: true },
+          { name: "Enterprise", desc: "Sistem terdistribusi dengan ketersediaan tinggi.", price: "Custom", features: ["Arsitektur Layanan Mikro", "Penyeimbangan Beban", "Ketersediaan Tinggi", "Pemantauan 24/7"], isPopular: false }
+        ],
+        uiux: [
+          { name: "Dasar", desc: "Wireframe sederhana dan desain UI.", price: "2.5", features: ["Wireframing", "Pembuatan Prototipe Dasar", "Hingga 5 Layar", "2 Revisi"], isPopular: false },
+          { name: "Pro", desc: "Prototipe interaktif fidelitas tinggi.", price: "4.0", features: ["UI Fidelitas Tinggi", "Prototipe Interaktif", "Optimasi Alur Pengguna", "4 Revisi"], isPopular: true },
+          { name: "Enterprise", desc: "Sistem desain lengkap dan penelitian pengguna.", price: "Custom", features: ["Pembuatan Sistem Desain", "Penelitian Pengguna", "Pengujian Kegunaan", "Revisi Tak Terbatas"], isPopular: false }
+        ],
+        mobile: [
+          { name: "Dasar", desc: "Aplikasi seluler sederhana untuk satu platform.", price: "6.0", features: ["Pengaturan Lintas Platform", "Elemen UI Dasar", "Integrasi API", "Pengiriman App Store"], isPopular: false },
+          { name: "Pro", desc: "Aplikasi lintas platform kaya fitur.", price: "9.0", features: ["Performa Asli", "Notifikasi Push", "Penyimpanan Lokal", "Animasi Lanjutan"], isPopular: true },
+          { name: "Enterprise", desc: "Aplikasi seluler berskala besar.", price: "Custom", features: ["Modul Asli Kustom", "State Kompleks", "Integrasi Perangkat Keras", "Dukungan Berkelanjutan"], isPopular: false }
+        ],
+        data: [
+          { name: "Dasar", desc: "Pemodelan data dan pelaporan dasar.", price: "5.0", features: ["Pemodelan Data", "Pelaporan Dasar", "Pembersihan Data", "Wawasan Mingguan"], isPopular: false },
+          { name: "Pro", desc: "Analitik lanjutan dan dasbor interaktif.", price: "8.0", features: ["Analisis Statistik", "Dasbor Interaktif", "Model Prediktif", "Data Real-time"], isPopular: true },
+          { name: "Enterprise", desc: "Infrastruktur big data dan analisis mendalam.", price: "Custom", features: ["Arsitektur Big Data", "Pengaturan Jalur Data", "Model Deep Learning", "Analis Khusus"], isPopular: false }
+        ],
+        ai: [
+          { name: "Dasar", desc: "Integrasi API AI yang ada.", price: "7.0", features: ["Integrasi API (OpenAI dll)", "Prompt Engineering Dasar", "Otomatisasi Alur Kerja", "Chatbot Sederhana"], isPopular: false },
+          { name: "Pro", desc: "Penyempurnaan model kustom dan sistem cerdas.", price: "12.0", features: ["Penyempurnaan Model", "Sistem Cerdas", "Implementasi RAG", "Chatbot Lanjutan"], isPopular: true },
+          { name: "Enterprise", desc: "Melatih model kustom dari awal.", price: "Custom", features: ["Model ML Kustom", "Pelatihan Data Skala Besar", "Penyebaran On-premise", "Insinyur AI Khusus"], isPopular: false }
+        ]
+      }
     },
     footer: {
       subtitle: "Membangun pengalaman digital yang luar biasa.",
