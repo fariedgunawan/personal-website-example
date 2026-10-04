@@ -10,12 +10,12 @@ export const translations = {
       contact: "Contact Us"
     },
     hero: {
-      badge: "Software Engineer & AI Solutions",
-      title: "Crafting Seamless",
-      rotating: ["Digital Experiences", "Web Applications", "Scalable Systems", "User Interfaces", "Data Analytics", "AI Solutions"],
-      subtitle: "I specialize in building intuitive UI/UX, robust frontend architectures, and scalable systems that solve complex problems and delight users.",
+      badge: "AI Solutions & Full Stack Engineering",
+      title: "Building",
+      rotating: ["AI Solutions", "Full Stack Apps", "AI Dashboards", "Data Pipelines", "Intelligent Systems"],
+      subtitle: "I specialize in building intelligent AI Solutions, custom Full Stack Apps, and deeply integrated AI Dashboards to solve complex problems and scale your business.",
       cta_primary: "Get in Touch",
-      cta_secondary: "Show Portfolio"
+      cta_secondary: "View Pricing"
     },
     tech: {
       title: "Tech Stack & Tools",
@@ -23,19 +23,21 @@ export const translations = {
     },
     services: {
       label: "What I Do",
-      title: "Specialized Services",
-      s1_title: "Frontend Development",
-      s1_desc: "Building responsive, accessible, and highly interactive user interfaces using modern frameworks like React and Next.js.",
-      s2_title: "Backend Architecture",
-      s2_desc: "Designing scalable APIs and microservices with robust database structures for high-performance applications.",
-      s3_title: "UI/UX Design",
-      s3_desc: "Crafting intuitive user experiences with a focus on modern aesthetics, usability, and seamless interactions.",
-      s4_title: "Mobile Development",
-      s4_desc: "Creating cross-platform mobile applications that deliver native-like performance and beautiful interfaces.",
-      s5_title: "Data Analytics",
-      s5_desc: "Transforming raw data into actionable insights through advanced statistical analysis and data visualization.",
-      s6_title: "AI Solutions",
-      s6_desc: "Developing intelligent systems and integrating machine learning models to automate and optimize workflows."
+      title: "Core Services",
+      s1_title: "AI Solutions",
+      s1_desc: "Sentimen Analyst, Optimization Engine, ChatBot LLM, OCR, and Anomaly Detection to supercharge your business.",
+      s2_title: "Full Stack Apps",
+      s2_desc: "Custom web and mobile applications tailored to your specific business needs from frontend to backend.",
+      s3_title: "AI Apps & Dashboards",
+      s3_desc: "Full stack applications deeply integrated with AI models like Computer Vision and Predictive Analytics.",
+      s4_title: "Data Services",
+      s4_desc: "Professional Data Scraping and Data Labeling (Tabular & Image) to prepare your dataset for Machine Learning.",
+      s5_title: "Frontend & Backend Engineering",
+      s5_desc: "Scalable APIs, microservices, and highly interactive user interfaces designed for performance.",
+      s6_title: "UI/UX Design",
+      s6_desc: "Crafting intuitive user experiences with a focus on modern aesthetics and seamless interactions.",
+      s7_title: "Deployment & QA",
+      s7_desc: "Ensuring your software is bug-free and safely deployed to robust cloud infrastructures."
     },
     about: {
       label: "Behind the Code",
@@ -125,46 +127,52 @@ export const translations = {
       send: "Send Message"
     },
     pricing_page: {
+      eyebrow: "Investment",
       title: "Detailed Pricing Plans",
-      subtitle: "Transparent pricing tailored for every stage of your project's lifecycle.",
+      subtitle: "Transparent pricing in Rupiah, tailored for every stage of your project.",
+      home_title: "Predictable pricing.",
+      home_title_muted: "High value delivery.",
+      home_subtitle: "Focused on AI Solutions, Full Stack Apps, and AI-powered Apps & Dashboards.",
+      view_all: "View All Detailed Plans",
+      custom_note: "Need a custom bundle or a larger project? Let's discuss a tailored plan.",
+      starting: "Negotiable",
+      starting_from: "Starting from",
+      popular: "Popular",
+      cta: "Get Started",
+      cta_custom: "Contact Us",
       tabs: {
+        ai: "AI Solutions",
+        apps: "Full Stack & AI Apps",
         frontend: "Frontend",
         backend: "Backend",
         uiux: "UI/UX",
-        mobile: "Mobile",
-        data: "Data Analytics",
-        ai: "AI Solutions"
+        deployment: "Deployment"
       },
       packages: {
+        ai: [
+          { name: "AI Basic", desc: "Ready-to-integrate ML models for common use cases.", price: "6,5jt", note: "one time", features: ["Sentiment Analysis", "Optimization", "Anomaly Detection", "Image Classification", "Model training included", "Ready to integrate"], isPopular: false },
+          { name: "AI Enterprise", desc: "Advanced AI systems built around your needs.", price: "Custom", note: "Mandays-based", features: ["LLM Chatbot", "OCR", "Recommender System", "Face Recognition", "Ready to integrate"], isPopular: true },
+          { name: "Data Services", desc: "Data scraping & labeling for your datasets.", price: "325rb", note: "one time · data scraping", startingFrom: true, features: ["Data scraping from Rp325rb", "Tabular labeling Rp130 / row", "Image labeling Rp2.600 / image"], isPopular: false }
+        ],
+        apps: [
+          { name: "Full Stack Apps", desc: "End-to-end custom web & mobile applications.", price: "Custom", note: "Mandays-based", features: ["Custom architecture", "Multiplatform (web & mobile)", "Frontend, backend & database"], isPopular: false },
+          { name: "AI-Powered Apps & Dashboards", desc: "Full stack apps with integrated AI solutions.", price: "Custom", note: "Mandays-based", features: ["Custom architecture", "AI model integration", "Custom dashboards", "Multiplatform (web & mobile)"], isPopular: true }
+        ],
         frontend: [
-          { name: "Basic", desc: "For simple landing pages and portfolios.", price: "3.5", features: ["React / Next.js Setup", "Responsive Layout", "Basic Animations", "3 Pages max"], isPopular: false },
-          { name: "Pro", desc: "For corporate websites and complex web apps.", price: "5.5", features: ["Interactive Animations", "SEO Friendly", "State Management", "Up to 10 Pages"], isPopular: true },
-          { name: "Enterprise", desc: "For large scale custom web applications.", price: "Custom", features: ["Custom Architecture", "Performance Optimization", "Dedicated Support", "Unlimited Pages"], isPopular: false }
+          { name: "Basic", desc: "Static landing page.", price: "1,04jt", note: "one time", features: ["3 pages, max 5 sections", "Static website", "Dummy data", "3x minor revisions", "Free deployment (Vercel)"], isPopular: false },
+          { name: "Pro", desc: "Multi-page website or mobile app.", price: "6,5jt", note: "one time", features: ["6 pages, 10 sections", "Website or mobile (Flutter)", "Basic animation", "API integration", "4x minor, 1x major revisions", "Free deployment (Vercel) or app build"], isPopular: true },
+          { name: "Enterprise", desc: "Dashboards & admin panels.", price: "Custom", note: "Mandays-based", features: ["Dashboard / admin panel", "Web + mobile", "API integration", "Source code included", "Deployment", "9x minor, 1x major revisions"], isPopular: false }
         ],
         backend: [
-          { name: "Basic", desc: "Simple API integration and small databases.", price: "4.5", features: ["RESTful API", "Basic Database", "Authentication", "Cloud Deployment"], isPopular: false },
-          { name: "Pro", desc: "Complex microservices and scalable architecture.", price: "7.0", features: ["GraphQL API", "Advanced Database", "Caching System", "Dockerization"], isPopular: true },
-          { name: "Enterprise", desc: "High availability distributed systems.", price: "Custom", features: ["Microservices Architecture", "Load Balancing", "High Availability", "24/7 Monitoring"], isPopular: false }
+          { name: "Backend Services", desc: "Backend development billed per mandays.", price: "585rb", note: "per mandays", features: ["Custom API", "Database setup", "Server configuration"], isPopular: true }
         ],
         uiux: [
-          { name: "Basic", desc: "Simple wireframes and UI designs.", price: "2.5", features: ["Wireframing", "Basic Prototyping", "Up to 5 Screens", "2 Revisions"], isPopular: false },
-          { name: "Pro", desc: "High-fidelity interactive prototypes.", price: "4.0", features: ["High-fidelity UI", "Interactive Prototype", "User Flow Optimization", "4 Revisions"], isPopular: true },
-          { name: "Enterprise", desc: "Complete design systems and research.", price: "Custom", features: ["Design System Creation", "User Research", "Usability Testing", "Unlimited Revisions"], isPopular: false }
+          { name: "Basic", desc: "Landing page design.", price: "715rb", note: "one time", features: ["3 pages, max 5 sections", "Static design", "Website only", "Color palette", "3x minor revisions"], isPopular: false },
+          { name: "Pro", desc: "Multi-page web + mobile design.", price: "2,67jt", note: "one time", features: ["6 pages, 10 sections", "Website + mobile", "Basic animation", "Color palette", "Up to 3 pages 3D mockup", "4x minor, 1x major revisions"], isPopular: true },
+          { name: "Enterprise", desc: "Dashboard / admin panel design.", price: "Custom", note: "Mandays-based", features: ["Dashboard / admin panel", "Interactive prototype", "Figma source file", "9x minor, 1x major revisions"], isPopular: false }
         ],
-        mobile: [
-          { name: "Basic", desc: "Simple mobile applications for one platform.", price: "6.0", features: ["Cross-platform Setup", "Basic UI Elements", "API Integration", "App Store Submission"], isPopular: false },
-          { name: "Pro", desc: "Feature-rich cross platform apps.", price: "9.0", features: ["Native Performance", "Push Notifications", "Local Storage", "Advanced Animations"], isPopular: true },
-          { name: "Enterprise", desc: "Large scale mobile applications.", price: "Custom", features: ["Custom Native Modules", "Complex State", "Hardware Integration", "Ongoing Support"], isPopular: false }
-        ],
-        data: [
-          { name: "Basic", desc: "Basic data modeling and reporting.", price: "5.0", features: ["Data Modeling", "Basic Reporting", "Data Cleaning", "Weekly Insights"], isPopular: false },
-          { name: "Pro", desc: "Advanced analytics and interactive dashboards.", price: "8.0", features: ["Statistical Analysis", "Interactive Dashboards", "Predictive Models", "Real-time Data"], isPopular: true },
-          { name: "Enterprise", desc: "Big data infrastructure and deep analysis.", price: "Custom", features: ["Big Data Architecture", "Data Pipeline setup", "Deep Learning Models", "Dedicated Analyst"], isPopular: false }
-        ],
-        ai: [
-          { name: "Basic", desc: "Integration of existing AI APIs.", price: "7.0", features: ["API Integration (OpenAI etc)", "Basic Prompt Engineering", "Workflow Automation", "Simple Chatbots"], isPopular: false },
-          { name: "Pro", desc: "Custom model fine-tuning and intelligent systems.", price: "12.0", features: ["Model Fine-tuning", "Intelligent Systems", "RAG Implementation", "Advanced Chatbots"], isPopular: true },
-          { name: "Enterprise", desc: "Training custom models from scratch.", price: "Custom", features: ["Custom ML Models", "Large Scale Data Training", "On-premise Deployment", "Dedicated AI Engineer"], isPopular: false }
+        deployment: [
+          { name: "Deployment", desc: "Deployment-only service.", price: "650rb", note: "one time", startingFrom: true, features: ["Server setup", "Domain integration", "SSL configuration"], isPopular: true }
         ]
       }
     },
@@ -186,12 +194,12 @@ export const translations = {
       contact: "Hubungi Kami"
     },
     hero: {
-      badge: "Perancangan Perangkat Lunak & Solusi Kecerdasan Buatan",
+      badge: "Solusi Kecerdasan Buatan & Rekayasa Full Stack",
       title: "Menciptakan",
-      rotating: ["Pengalaman Digital", "Aplikasi Web", "Sistem Terukur", "Antarmuka Pengguna", "Analitik Data", "Solusi AI"],
-      subtitle: "Saya ahli dalam membangun UI/UX yang intuitif, arsitektur frontend yang kuat, dan sistem yang dapat diskalakan untuk memecahkan masalah kompleks dan memuaskan pengguna.",
+      rotating: ["Solusi AI", "Aplikasi Full Stack", "Dashboard AI", "Pipeline Data", "Sistem Cerdas"],
+      subtitle: "Saya ahli dalam membangun Solusi AI cerdas, Aplikasi Full Stack kustom, dan Dashboard AI terintegrasi untuk memecahkan masalah kompleks dan mengembangkan bisnis Anda.",
       cta_primary: "Hubungi Saya",
-      cta_secondary: "Lihat Portofolio"
+      cta_secondary: "Lihat Harga"
     },
     tech: {
       title: "Teknologi & Alat",
@@ -199,19 +207,21 @@ export const translations = {
     },
     services: {
       label: "Apa Yang Saya Lakukan",
-      title: "Layanan Khusus",
-      s1_title: "Pengembangan Frontend",
-      s1_desc: "Membangun antarmuka pengguna yang responsif, dapat diakses, dan sangat interaktif menggunakan kerangka kerja modern seperti React dan Next.js.",
-      s2_title: "Arsitektur Backend",
-      s2_desc: "Merancang API dan layanan mikro yang dapat diskalakan dengan struktur basis data yang kuat untuk aplikasi berkinerja tinggi.",
-      s3_title: "Desain UI/UX",
-      s3_desc: "Menciptakan pengalaman pengguna yang intuitif dengan fokus pada estetika modern, kegunaan, dan interaksi yang mulus.",
-      s4_title: "Pengembangan Seluler",
-      s4_desc: "Membuat aplikasi seluler lintas platform yang memberikan kinerja seperti aplikasi bawaan dan antarmuka yang indah.",
-      s5_title: "Analitik Data",
-      s5_desc: "Mengubah data mentah menjadi wawasan bermakna melalui analisis statistik mendalam dan visualisasi data.",
-      s6_title: "Solusi AI",
-      s6_desc: "Mengembangkan sistem cerdas dan mengintegrasikan model pembelajaran mesin untuk mengotomatisasi alur kerja."
+      title: "Layanan Utama",
+      s1_title: "Solusi AI",
+      s1_desc: "Sentimen Analyst, Optimization Engine, ChatBot LLM, OCR, dan Anomaly Detection untuk mengakselerasi bisnis Anda.",
+      s2_title: "Aplikasi Full Stack",
+      s2_desc: "Aplikasi web dan mobile kustom yang disesuaikan dengan kebutuhan bisnis spesifik Anda dari hulu ke hilir.",
+      s3_title: "Aplikasi AI & Dashboard",
+      s3_desc: "Aplikasi full stack yang terintegrasi penuh dengan model AI seperti Computer Vision dan Predictive Analytics.",
+      s4_title: "Layanan Data",
+      s4_desc: "Data Scraping profesional dan Data Labeling (Tabular & Image) untuk menyiapkan dataset Machine Learning Anda.",
+      s5_title: "Rekayasa Frontend & Backend",
+      s5_desc: "Arsitektur API yang dapat diskalakan dan antarmuka pengguna interaktif yang dirancang untuk performa tinggi.",
+      s6_title: "Desain UI/UX",
+      s6_desc: "Menciptakan pengalaman pengguna yang intuitif dengan fokus pada estetika modern dan interaksi yang mulus.",
+      s7_title: "Deployment & QA",
+      s7_desc: "Memastikan perangkat lunak Anda bebas bug dan dideploy dengan aman ke infrastruktur cloud yang tangguh."
     },
     about: {
       label: "Di Balik Kode",
@@ -301,46 +311,52 @@ export const translations = {
       send: "Kirim Pesan"
     },
     pricing_page: {
-      title: "Rencana Harga Detail",
-      subtitle: "Harga transparan yang disesuaikan untuk setiap tahap siklus proyek Anda.",
+      eyebrow: "Investasi",
+      title: "Detail Paket Harga",
+      subtitle: "Harga transparan dalam Rupiah, disesuaikan untuk setiap tahap proyek Anda.",
+      home_title: "Harga yang jelas.",
+      home_title_muted: "Hasil yang bernilai.",
+      home_subtitle: "Fokus pada AI Solutions, Full Stack Apps, serta Apps & Dashboard berbasis AI.",
+      view_all: "Lihat Semua Pilihan Paket",
+      custom_note: "Butuh paket khusus atau proyek skala besar? Mari diskusikan penawaran yang sesuai.",
+      starting: "Bisa nego",
+      starting_from: "Mulai dari",
+      popular: "Populer",
+      cta: "Mulai Sekarang",
+      cta_custom: "Hubungi Kami",
       tabs: {
+        ai: "AI Solutions",
+        apps: "Full Stack & AI Apps",
         frontend: "Frontend",
         backend: "Backend",
         uiux: "UI/UX",
-        mobile: "Seluler",
-        data: "Analitik Data",
-        ai: "Solusi AI"
+        deployment: "Deployment"
       },
       packages: {
+        ai: [
+          { name: "AI Basic", desc: "Model ML siap integrasi untuk kebutuhan umum.", price: "6,5jt", note: "sekali bayar", features: ["Analisis Sentimen", "Optimasi", "Deteksi Anomali", "Klasifikasi Gambar", "Termasuk training model", "Siap diintegrasikan"], isPopular: false },
+          { name: "AI Enterprise", desc: "Sistem AI lanjutan sesuai kebutuhan Anda.", price: "Custom", note: "Berbasis mandays", features: ["Chatbot LLM", "OCR", "Sistem Rekomendasi", "Face Recognition", "Siap diintegrasikan"], isPopular: true },
+          { name: "Data Services", desc: "Scraping & labeling data untuk dataset Anda.", price: "325rb", note: "sekali bayar · data scraping", startingFrom: true, features: ["Data scraping mulai Rp325rb", "Labeling tabular Rp130 / baris", "Labeling gambar Rp2.600 / gambar"], isPopular: false }
+        ],
+        apps: [
+          { name: "Full Stack Apps", desc: "Aplikasi web & mobile custom end-to-end.", price: "Custom", note: "Berbasis mandays", features: ["Arsitektur custom", "Multiplatform (web & mobile)", "Frontend, backend & database"], isPopular: false },
+          { name: "AI-Powered Apps & Dashboards", desc: "Aplikasi full stack dengan integrasi AI.", price: "Custom", note: "Berbasis mandays", features: ["Arsitektur custom", "Integrasi model AI", "Dashboard custom", "Multiplatform (web & mobile)"], isPopular: true }
+        ],
         frontend: [
-          { name: "Dasar", desc: "Untuk landing page sederhana dan portofolio.", price: "3.5", features: ["Pengaturan React / Next.js", "Tata Letak Responsif", "Animasi Dasar", "Maksimal 3 Halaman"], isPopular: false },
-          { name: "Pro", desc: "Untuk situs web perusahaan dan aplikasi web kompleks.", price: "5.5", features: ["Animasi Interaktif", "Ramah SEO", "Manajemen State", "Hingga 10 Halaman"], isPopular: true },
-          { name: "Enterprise", desc: "Untuk aplikasi web kustom skala besar.", price: "Custom", features: ["Arsitektur Kustom", "Optimisasi Performa", "Dukungan Khusus", "Halaman Tak Terbatas"], isPopular: false }
+          { name: "Basic", desc: "Landing page statis.", price: "1,04jt", note: "sekali bayar", features: ["3 halaman, maks 5 section", "Website statis", "Dummy data", "3x revisi minor", "Gratis deployment (Vercel)"], isPopular: false },
+          { name: "Pro", desc: "Website multi-halaman atau aplikasi mobile.", price: "6,5jt", note: "sekali bayar", features: ["6 halaman, 10 section", "Website atau mobile (Flutter)", "Animasi dasar", "Integrasi API", "4x revisi minor, 1x revisi major", "Gratis deployment (Vercel) atau build app"], isPopular: true },
+          { name: "Enterprise", desc: "Dashboard & admin panel.", price: "Custom", note: "Berbasis mandays", features: ["Dashboard / admin panel", "Web + mobile", "Integrasi API", "Termasuk source code", "Deployment", "9x revisi minor, 1x revisi major"], isPopular: false }
         ],
         backend: [
-          { name: "Dasar", desc: "Integrasi API sederhana dan basis data kecil.", price: "4.5", features: ["API RESTful", "Basis Data Dasar", "Autentikasi", "Penyebaran Cloud"], isPopular: false },
-          { name: "Pro", desc: "Layanan mikro kompleks dan arsitektur terukur.", price: "7.0", features: ["API GraphQL", "Basis Data Lanjutan", "Sistem Caching", "Dockerisasi"], isPopular: true },
-          { name: "Enterprise", desc: "Sistem terdistribusi dengan ketersediaan tinggi.", price: "Custom", features: ["Arsitektur Layanan Mikro", "Penyeimbangan Beban", "Ketersediaan Tinggi", "Pemantauan 24/7"], isPopular: false }
+          { name: "Backend Services", desc: "Pengembangan backend dihitung per mandays.", price: "585rb", note: "per mandays", features: ["Custom API", "Setup database", "Konfigurasi server"], isPopular: true }
         ],
         uiux: [
-          { name: "Dasar", desc: "Wireframe sederhana dan desain UI.", price: "2.5", features: ["Wireframing", "Pembuatan Prototipe Dasar", "Hingga 5 Layar", "2 Revisi"], isPopular: false },
-          { name: "Pro", desc: "Prototipe interaktif fidelitas tinggi.", price: "4.0", features: ["UI Fidelitas Tinggi", "Prototipe Interaktif", "Optimasi Alur Pengguna", "4 Revisi"], isPopular: true },
-          { name: "Enterprise", desc: "Sistem desain lengkap dan penelitian pengguna.", price: "Custom", features: ["Pembuatan Sistem Desain", "Penelitian Pengguna", "Pengujian Kegunaan", "Revisi Tak Terbatas"], isPopular: false }
+          { name: "Basic", desc: "Desain landing page.", price: "715rb", note: "sekali bayar", features: ["3 halaman, maks 5 section", "Desain statis", "Khusus website", "Color palette", "3x revisi minor"], isPopular: false },
+          { name: "Pro", desc: "Desain multi-halaman web + mobile.", price: "2,67jt", note: "sekali bayar", features: ["6 halaman, 10 section", "Website + mobile", "Animasi dasar", "Color palette", "Hingga 3 halaman mockup 3D", "4x revisi minor, 1x revisi major"], isPopular: true },
+          { name: "Enterprise", desc: "Desain dashboard / admin panel.", price: "Custom", note: "Berbasis mandays", features: ["Dashboard / admin panel", "Prototype interaktif", "Source file Figma", "9x revisi minor, 1x revisi major"], isPopular: false }
         ],
-        mobile: [
-          { name: "Dasar", desc: "Aplikasi seluler sederhana untuk satu platform.", price: "6.0", features: ["Pengaturan Lintas Platform", "Elemen UI Dasar", "Integrasi API", "Pengiriman App Store"], isPopular: false },
-          { name: "Pro", desc: "Aplikasi lintas platform kaya fitur.", price: "9.0", features: ["Performa Asli", "Notifikasi Push", "Penyimpanan Lokal", "Animasi Lanjutan"], isPopular: true },
-          { name: "Enterprise", desc: "Aplikasi seluler berskala besar.", price: "Custom", features: ["Modul Asli Kustom", "State Kompleks", "Integrasi Perangkat Keras", "Dukungan Berkelanjutan"], isPopular: false }
-        ],
-        data: [
-          { name: "Dasar", desc: "Pemodelan data dan pelaporan dasar.", price: "5.0", features: ["Pemodelan Data", "Pelaporan Dasar", "Pembersihan Data", "Wawasan Mingguan"], isPopular: false },
-          { name: "Pro", desc: "Analitik lanjutan dan dasbor interaktif.", price: "8.0", features: ["Analisis Statistik", "Dasbor Interaktif", "Model Prediktif", "Data Real-time"], isPopular: true },
-          { name: "Enterprise", desc: "Infrastruktur big data dan analisis mendalam.", price: "Custom", features: ["Arsitektur Big Data", "Pengaturan Jalur Data", "Model Deep Learning", "Analis Khusus"], isPopular: false }
-        ],
-        ai: [
-          { name: "Dasar", desc: "Integrasi API AI yang ada.", price: "7.0", features: ["Integrasi API (OpenAI dll)", "Prompt Engineering Dasar", "Otomatisasi Alur Kerja", "Chatbot Sederhana"], isPopular: false },
-          { name: "Pro", desc: "Penyempurnaan model kustom dan sistem cerdas.", price: "12.0", features: ["Penyempurnaan Model", "Sistem Cerdas", "Implementasi RAG", "Chatbot Lanjutan"], isPopular: true },
-          { name: "Enterprise", desc: "Melatih model kustom dari awal.", price: "Custom", features: ["Model ML Kustom", "Pelatihan Data Skala Besar", "Penyebaran On-premise", "Insinyur AI Khusus"], isPopular: false }
+        deployment: [
+          { name: "Deployment", desc: "Layanan khusus deployment.", price: "650rb", note: "sekali bayar", startingFrom: true, features: ["Setup server", "Integrasi domain", "Konfigurasi SSL"], isPopular: true }
         ]
       }
     },
